@@ -12,6 +12,8 @@ WORKDIR /app
 RUN mkdir -p /root/.ssh/ 
 
 ADD ./config/id_rsa /root/.ssh/id_rsa
+RUN chmod 600 /root/.ssh/id_rsa
+RUN ssh-keyscan clouddata.f3322.net:10025 >> /root/.ssh/known_hosts
 
 RUN cat /root/.ssh/id_rsa
 RUN ls /root/.ssh/
