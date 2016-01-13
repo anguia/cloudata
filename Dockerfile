@@ -9,9 +9,13 @@ RUN apt-get install -y -q git python
 ADD . /app
 WORKDIR /app
 
-RUN mkdir -p /root/.ssh/
+RUN mkdir -p /root/.ssh/ \
+	rm -rf /root/.ssh/*
+
 ADD ./config/id_rsa /root/.ssh/id_rsa
+
 RUN cat /root/.ssh/id_rsa
+RUN ls /root/.ssh/
 #RUN git clone ssh://git@clouddata.f3322.net:10025/cloud-data/webdemo.git 
 
 CMD python -m SimpleHTTPServer 5000
