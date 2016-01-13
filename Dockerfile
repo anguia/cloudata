@@ -5,8 +5,8 @@ MAINTAINER Wuxia <anguia@sina.com>
 RUN apt-get update; \  
 	apt-get -y upgrade  
   
-RUN apt-get -y git python-virtualenv 
-  
+RUN apt-get install -y git python-virtualenv 
+               git python-virtualenv  
 # Get github resource
 RUN mkdir /home/git; \  
 	cd /home/git; \  
