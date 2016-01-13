@@ -15,7 +15,7 @@ ADD ./config/id_rsa /root/.ssh/id_rsa
 
 RUN cat /root/.ssh/id_rsa
 RUN ls /root/.ssh/
-#RUN git clone ssh://git@clouddata.f3322.net:10025/cloud-data/webdemo.git 
+RUN git clone ssh://git@clouddata.f3322.net:10025/cloud-data/webdemo.git 
 
 CMD python -m SimpleHTTPServer 5000
 EXPOSE 5000
