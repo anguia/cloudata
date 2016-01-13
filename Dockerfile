@@ -4,7 +4,7 @@ MAINTAINER Wuxia <anguia@sina.com>
   
 RUN apt-get update;   
   
-RUN apt-get install -y -q git python-all
+RUN apt-get install -y -q git python
 
 ADD . /app
 WORKDIR /app
