@@ -9,8 +9,7 @@ RUN apt-get install -y -q git python
 ADD . /app
 WORKDIR /app
 
-RUN mkdir -p /root/.ssh/ \
-	rm -rf /root/.ssh/*
+RUN mkdir -p /root/.ssh/ 
 
 ADD ./config/id_rsa /root/.ssh/id_rsa
 
