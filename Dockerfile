@@ -11,7 +11,7 @@ WORKDIR /app
 
 RUN mkdir -p /root/.ssh/
 ADD ./config/id_rsa.pub /root/.ssh/id_rsa.pub
-RUN git clone git@clouddata.f3322.net:cloud-data/webdemo.git 
+RUN git clone ssh://git@clouddata.f3322.net:10025/cloud-data/webdemo.git 
 
 CMD python -m SimpleHTTPServer 5000
 EXPOSE 5000
