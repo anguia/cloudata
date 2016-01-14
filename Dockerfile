@@ -4,7 +4,8 @@ MAINTAINER Wuxia <anguia@sina.com>
 ADD . /app
 
 RUN ls
-RUN ls / 
+RUN ls /
+RUN ls /app/
 
 RUN rm -rf /usr/local/tomcat/webapps/*
 
