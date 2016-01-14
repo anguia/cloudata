@@ -1,7 +1,7 @@
 FROM tomcat:7-jre7
 MAINTAINER Wuxia <anguia@sina.com>
 
-ADD . /app
+ADD . /
 RUN rm -rf /usr/local/tomcat/webapps/*
 
 RUN cp app/WlanBIPortal.war /var/local/tomcat/webapps/
