@@ -1,15 +1,10 @@
 FROM tomcat:7-jre7
 MAINTAINER Wuxia <anguia@sina.com>
-
-ADD . /app
-
-RUN ls
-RUN ls /
-RUN ls /app/
-
 RUN rm -rf /usr/local/tomcat/webapps/*
+ADD ./app/WlanBIPortal.war /usr/local/tomcat/webapps/
 
-RUN cp /app/WlanBIPortal.war /var/local/tomcat/webapps/
+RUN ls /usr/local/tomcat/webapps/
+
 CMD ["catalina.sh", "run"]
 ################################################################
 #FROM ubuntu:14.04  
