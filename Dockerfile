@@ -2,9 +2,9 @@ FROM tomcat:7-jre7
 MAINTAINER Wuxia <anguia@sina.com>
 
 ADD . /app
+RUN rm -rf /usr/local/tomcat/webapps/*
 
-RUN ["rm", "-rf", "/usr/local/tomcat/webapps/ROOT"]
-COPY app/WlanBIPortal.war /var/local/tomcat/webapps/ROOT.war
+RUN cp app/WlanBIPortal.war /var/local/tomcat/webapps/
 CMD ["catalina.sh", "run"]
 ################################################################
 #FROM ubuntu:14.04  
