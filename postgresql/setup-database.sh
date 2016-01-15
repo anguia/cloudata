@@ -17,9 +17,10 @@ EOSQL
 gosu postgres postgres --single <<- EOSQL
 GRANT ALL PRIVILEGES ON DATABASE $DB_NAME TO $DB_USER;
 EOSQL
-cd ./config
+cd /docker-entrypoint-initdb.d/config
 psql -U$DB_USER -b$DB_NAME < install.sql
 cd -
+
 fi
 echo ""
 echo "******DOCKER DATABASE CREATED******"
