@@ -1,11 +1,14 @@
-FROM tomcat:7-jre7
+FROM postgres:9.4
 MAINTAINER Wuxia <anguia@sina.com>
-RUN rm -rf /usr/local/tomcat/webapps/*
-ADD ./app/WlanBIPortal.war /usr/local/tomcat/webapps/
 
-RUN ls /usr/local/tomcat/webapps/
+ENV DB_NAME aiwlanbi
+ENV DB_USER aiwlanbi
+ENV DB_PASS aiwlanbi
 
-CMD ["catalina.sh", "run"]
+ADD setupRemoteConnections.sh /docker-entrypoint-initdb.d/setupRemoteConnections.sh
+RUN chmod 755 /docker-entrypoint-initdb.d/*.sh
+ADD setup-database.sh /docker-entrypoint-initdb.d/setup-database.sh
+RUN chmod 755 /docker-entrypoint-initdb.d/*.sh
 ################################################################
 #FROM ubuntu:14.04  
  
