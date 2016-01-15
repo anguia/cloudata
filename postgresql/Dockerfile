@@ -5,10 +5,11 @@ ENV DB_NAME aiwlanbi
 ENV DB_USER aiwlanbi
 ENV DB_PASS aiwlanbi
 
+ADD ./config /docker-entrypoint-initdb.d/
 ADD setupRemoteConnections.sh /docker-entrypoint-initdb.d/setupRemoteConnections.sh
-RUN chmod 755 /docker-entrypoint-initdb.d/*.sh
+RUN chmod 755 /docker-entrypoint-initdb.d/setupRemoteConnections.sh
 ADD setup-database.sh /docker-entrypoint-initdb.d/setup-database.sh
-RUN chmod 755 /docker-entrypoint-initdb.d/*.sh
+RUN chmod 755 /docker-entrypoint-initdb.d/setup-database.sh
 ################################################################
 #FROM ubuntu:14.04  
  
