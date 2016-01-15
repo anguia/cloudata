@@ -1,4 +1,4 @@
-FROM postgres:9.4
+FROM postgres:9.4.3
 MAINTAINER Wuxia <anguia@sina.com>
 
 ENV DB_NAME aiwlanbi
