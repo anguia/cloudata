@@ -1,0 +1,1 @@
+﻿alter table sys_cboss_op_code  alter column op_id type text;

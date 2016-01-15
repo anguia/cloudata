@@ -1,0 +1,1 @@
+update sys_function set function_name = 'Radius校验数' where function_id = 48;

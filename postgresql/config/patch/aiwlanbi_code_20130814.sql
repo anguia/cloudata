@@ -1,0 +1,1 @@
+﻿alter table widget_class add function_id integer;

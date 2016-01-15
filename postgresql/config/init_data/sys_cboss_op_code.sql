@@ -1,0 +1,14 @@
+﻿INSERT INTO sys_cboss_op_code VALUES ('01', '用户注册', now());
+INSERT INTO sys_cboss_op_code VALUES ('02', '用户注销', now());
+INSERT INTO sys_cboss_op_code VALUES ('03', '密码重置', now());
+INSERT INTO sys_cboss_op_code VALUES ('04', '用户暂停', now());
+INSERT INTO sys_cboss_op_code VALUES ('05', '用户恢复', now());
+INSERT INTO sys_cboss_op_code VALUES ('06', '服务订购', now());
+INSERT INTO sys_cboss_op_code VALUES ('07', '服务订购取消', now());
+INSERT INTO sys_cboss_op_code VALUES ('10', '套餐申请', now());
+INSERT INTO sys_cboss_op_code VALUES ('11', '套餐取消', now());
+INSERT INTO sys_cboss_op_code VALUES ('12', '套餐变更', now());
+INSERT INTO sys_cboss_op_code VALUES ('14', '达到封顶后的暂停', now());
+INSERT INTO sys_cboss_op_code VALUES ('15', '封顶暂停后的恢复', now());
+INSERT INTO sys_cboss_op_code VALUES ('16', '该套餐用尽后的通知', now());
+INSERT INTO sys_cboss_op_code VALUES ('17', '该套餐用尽后的恢复', now());
