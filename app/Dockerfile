@@ -13,6 +13,7 @@ ENV POSTGRES_PASS root
 
 ADD run.sh /run.sh
 ADD set_postgres_db.sh /set_postgres_db.sh
+ADD set_tomcat.sh /set_tomcat.sh
 RUN chmod +x /*.sh
 
 CMD ["/run.sh"]
