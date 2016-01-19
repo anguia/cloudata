@@ -5,4 +5,4 @@ if [ ! -f /.postgres_db_configured ]; then
 fi
 
 echo "=> Starting and Running Tomcat..."
-/usr/local/tomcat/bin/catalina.sh start
+/usr/local/tomcat/bin/catalina.sh run
