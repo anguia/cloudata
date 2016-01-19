@@ -8,8 +8,7 @@ fi
 echo "=> unzip app War"
 
 rm -rf /usr/local/tomcat/webapps/WlanBIPortal
-unzip /usr/local/tomcat/webapps/WlanBIPortal.war -d /usr/local/tomcat/webapps/WlanBIPortal
-rm -rf /usr/local/tomcat/webapps/WlanBIPortal.war
+unzip /WlanBIPortal.war -d /usr/local/tomcat/webapps/WlanBIPortal
 
 echo "=> Configure Tomcat JDBC Connection"
 
