@@ -9,6 +9,7 @@ echo "=> unzip app War"
 
 rm -rf /usr/local/tomcat/webapps/WlanBIPortal
 unzip /usr/local/tomcat/webapps/WlanBIPortal.war -d /usr/local/tomcat/webapps/WlanBIPortal
+rm -rf /usr/local/tomcat/webapps/WlanBIPortal.war
 
 echo "=> Configure Tomcat JDBC Connection"
 
@@ -16,7 +17,7 @@ sed -i -e "s/<--POSTGRES_HOST-->/${POSTGRES_HOST}/g" \
 	-e "s/<--POSTGRES_PORT-->/${POSTGRES_PORT}/g" \
 	-e "s/<--POSTGRES_DB_NAME-->/${POSTGRES_DB_NAME}/g" \
 	-e "s/<--POSTGRES_USER-->/${POSTGRES_USER}/g" \
-	-e "s/<--POSTGRES_PASS-->/${POSTGRES_PASS}/g" /usr/local/tomcat/webapps/WlanBIPortal/jdbc.properties
+	-e "s/<--POSTGRES_PASS-->/${POSTGRES_PASS}/g" /usr/local/tomcat/webapps/WlanBIPortal/WEB-INF/classes/jdbc.properties
 
 touch /.tomcat_configured
 
