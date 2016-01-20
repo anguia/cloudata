@@ -2,6 +2,9 @@
 set -e
 if [ ! -f /.postgres_db_configured ]; then
 	/set_postgres_db.sh
+fi
+
+if [ ! -f /.tomcat_configured ]; then
 	/set_tomcat.sh
 fi
 

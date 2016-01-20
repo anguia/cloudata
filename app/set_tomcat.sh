@@ -25,5 +25,5 @@ echo "   jdbc.url=jdbc:postgresql://${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES
 echo "   jdbc.username=${POSTGRES_USER}"
 echo "   jdbc.password=${POSTGRES_PASS}"
 
-echo "   ** Please check your environment variables if you find somethin is misconfigured.**"
+echo "   ** Please check your environment variables if you find something is misconfigured.**"
 echo "=> Done!"
