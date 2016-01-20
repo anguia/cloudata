@@ -1,13 +1,15 @@
 #!/bin/bash
-TEST=`gosu postgres postgres --single <<- EOSQL
-SELECT 1 FROM pg_database WHERE datname='$DB_NAME';
-EOSQL`
-echo "******CREATING DOCKER DATABASE******"
+#TEST=`gosu postgres postgres --single <<- EOSQL
+#SELECT 1 FROM pg_database WHERE datname='$DB_NAME';
+#EOSQL`
+TEST=1
 if [[ $TEST == "1" ]]; then
 # database exists
 # $? is 0
 exit 0
 else
+echo "******CREATING DOCKER DATABASE******"
+if [[ $TEST == "1" ]]; then
 gosu postgres postgres --single <<- EOSQL
 CREATE ROLE $DB_USER WITH LOGIN ENCRYPTED PASSWORD '${DB_PASS}' CREATEDB;
 EOSQL
